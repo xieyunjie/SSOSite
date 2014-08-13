@@ -208,4 +208,7 @@
 			</list>
 		</property>
 	</bean>
+
+	<bean id="clearPassViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+		p:order="1" p:prefix="/WEB-INF/view/jsp/custom/" p:suffix=".jsp" />
 </beans>
