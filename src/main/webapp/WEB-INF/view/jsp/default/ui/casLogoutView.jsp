@@ -18,7 +18,6 @@
     under the License.
 
 --%>
-<jsp:directive.include file="includes/top.jsp" />
 <div id="msg" class="success">
 	<div>
 		<h1>customer logout</h1>
@@ -34,4 +33,3 @@
 		<spring:message code="screen.logout.security" />
 	</p>
 </div>
-<jsp:directive.include file="includes/bottom.jsp" />
