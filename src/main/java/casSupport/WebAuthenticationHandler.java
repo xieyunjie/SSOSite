@@ -17,6 +17,7 @@ public final class WebAuthenticationHandler extends AbstractUsernamePasswordAuth
 
 		String userName = credentials.getUsername();
 		String password = credentials.getPassword();
+		
 		if (password.equals(userName + userName))
 		{
 			return true;

@@ -88,8 +88,8 @@
 					+ -->
 
 				<!-- 用户与Principal转换，attributeRepository应该是获取属性的方式？ -->
-				<bean class="org.jasig.cas.authentication.principal.UsernamePasswordCredentialsToPrincipalResolver">
-					<property name="attributeRepository" ref="attributeRepository" />
+				<bean class="casSupport.WebUsernamePasswordCredentialsToPrincipalResolver">
+					<!-- <property name="attributeRepository" ref="attributeRepository" /> -->
 				</bean>
 				<!--
 					| HttpBasedServiceCredentialsToPrincipalResolver supports HttpBasedCredentials. It supports the CAS 2.0 approach of
@@ -188,7 +188,7 @@
 	-->
 	<!-- 客户端显示用户Attribute列表 -->
 	<bean id="serviceRegistryDao" class="org.jasig.cas.services.InMemoryServiceRegistryDaoImpl">
-		<property name="registeredServices">
+		<!-- <property name="registeredServices">
 			<list>
 				<bean class="org.jasig.cas.services.RegexRegisteredService">
 					<property name="id" value="0" />
@@ -204,7 +204,7 @@
 							<value>mobile</value>
 						</list>
 					</property> 
-				</bean>
+				</bean> -->
 				<!--
 					Use the following definition instead of the above to further restrict access
 					to services within your domain (including subdomains).
@@ -219,8 +219,8 @@
 					<property name="evaluationOrder" value="0" />
 					</bean>
 				-->
-			</list>
-		</property>
+<!-- 			</list>
+		</property> -->
 	</bean>
 
 	<bean id="auditTrailManager" class="com.github.inspektr.audit.support.Slf4jLoggingAuditTrailManager" />
